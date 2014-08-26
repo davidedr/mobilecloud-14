@@ -40,7 +40,10 @@ public class VideoServlet extends HttpServlet // Servlets should inherit HttpSer
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-
+		
+		System.out.println("doGet: '" + req + "'");
+		System.out.println();
+		
 		// Make sure and set the content-type header so that the client
 		// can properly (and securely!) display the content that you send
 		// back
@@ -76,6 +79,9 @@ public class VideoServlet extends HttpServlet // Servlets should inherit HttpSer
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		
+		System.out.println("doPost: '" + req + "'");
+		System.out.println();
 		
 		// First, extract the HTTP request parameters that we are expecting
 		// from either the URL query string or the url encoded form body
